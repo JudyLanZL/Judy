@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>协作创作空间</title>
+    <link rel="Shortcut Icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="stylesheet.css">
+    <meta name="Keywords" content="浪漫主义的根源Z"/>
+    <meta name="Description" content="浪漫主义的根源Z - "/>
+    <meta name="image:Logo" content=""/>
+    <meta name="image:背景" content="背景图.jpg">
+    <link rel="script" href="点赞评论.js">
+</head>
+<body>
+<h1 class="headline">协作创作空间</h1>
+<div class="h95"></div>
+<div class="box wid700  ">
+    <div class="selfinfo">
+
+        <img class="head" src="头像.jpg">
+        <h1 class="name">浪漫主义的根源Z</h1>
+        <div class="text"></div>
+    </div>
+    <h2>第一行诗</h2>
+    <p>
+        我沉溺在费米悖论中<br>
+        被虚空拖住了<br>
+        <strong class="change">抽象蜿蜒缠绕</strong><br>
+        <strong class="change">悲剧长河流淌</strong><br>
+        宇宙的弦啊<br>
+        告诉我真理吧<br>
+        遥远的星系<br>
+        你知道答案吗<br>
+        <br>
+        孤独从她的身体里穿过<br>
+        人生是空洞的<br>
+        意义摇摇欲坠<br>
+        时间像空间一样跨越<br>
+        无数个噩梦里的终极可以趋近吗<br>
+        还是宇宙只是混沌<br>
+        只是荒芜<br>
+    </p>
+    <p class="apart">
+        <hr>
+    </p>
+    <img class="button" src="like.png">:<button id="btn_zan">0</button>
+    <script>
+        function dianZan(){
+            var i = 0;
+            return function(){
+                this.innerHTML ="+"+ ++i;
+            }
+        }
+        btn_zan.onclick = dianZan();
+    </script>
+    <div id="box">
+        <div class="box-top">
+            <label>协作创作(标粗字体你有什么更好的想法呢？）：</label>
+            <textarea id="my_textarea" cols="60" rows="10"></textarea>
+            <button id="btn">发表</button>
+        </div>
+        <ul id="ul">
+
+        </ul>
+    </div>
+    <script src="Jquery/jquery-3.4.1.js"></script>
+    <script>
+        window.onload = function () {
+            // 1. 监听按钮的点击
+            $('btn').onclick = function () {
+                // 1.1 获取用户输入的内容
+                var content = $('my_textarea').value;
+                // console.log(content);
+
+                // 1.2 判断
+                if(content.length === 0){
+                    alert("请输入评论的内容~");
+                    return;
+                }
+
+                // 1.3 创建li标签放入ul
+                var li = document.createElement('li');
+                li.innerHTML = content + '<a href="javascript:;">删除</a>';
+                // $('ul').appendChild(li);
+                $('ul').insertBefore(li, $('ul').children[0]);
+
+                // 1.4 清除输入框中的内容
+                $('my_textarea').value = '';
+
+                // 1.5 删除评论
+                var as = $('ul').getElementsByTagName('a');
+
+                for(var i =0; i<as.length; i++){
+                    var a = as[i];
+                    a.onclick = function () {
+                        //  alert(9);
+                        // 1.6 获取父标签,删除
+                        this.parentNode.remove();
+                    }
+                }
+            }
+        };
+
+        function $(id) {
+            return typeof id === "string" ? document.getElementById(id) : null;
+        }
+    </script>
+        <h2>风景旧曾谙</h2>
+        <img class="pic" src="风景旧曾谙.JPG">
+    <div id="box">
+        <div class="box-top">
+            <label>协作创作(你想到了更好的标题吗？）：</label>
+            <textarea id="my_textarea" cols="60" rows="10"></textarea>
+            <button id="btn">发表</button>
+        </div>
+        <ul id="ul">
+
+        </ul>
+    </div>
+    <script src="Jquery/jquery-3.4.1.js"></script>
+    <script>
+        window.onload = function () {
+            // 1. 监听按钮的点击
+            $('btn').onclick = function () {
+                // 1.1 获取用户输入的内容
+                var content = $('my_textarea').value;
+                // console.log(content);
+
+                // 1.2 判断
+                if(content.length === 0){
+                    alert("请输入评论的内容~");
+                    return;
+                }
+
+                // 1.3 创建li标签放入ul
+                var li = document.createElement('li');
+                li.innerHTML = content + '<a href="javascript:;">删除</a>';
+                // $('ul').appendChild(li);
+                $('ul').insertBefore(li, $('ul').children[0]);
+
+                // 1.4 清除输入框中的内容
+                $('my_textarea').value = '';
+
+                // 1.5 删除评论
+                var as = $('ul').getElementsByTagName('a');
+
+                for(var i =0; i<as.length; i++){
+                    var a = as[i];
+                    a.onclick = function () {
+                        //  alert(9);
+                        // 1.6 获取父标签,删除
+                        this.parentNode.remove();
+                    }
+                }
+            }
+        };
+        function $(id) {
+            return typeof id === "string" ? document.getElementById(id) : null;
+        }
+    </script>
+    <div class="sch">
+        <form action="/search" method="get">
+            <input value="搜索" type="text" name="q" onFocus="if(this.value=='搜索'){this.value='';}" onBlur="if(this.value==''){this.value='搜索';}" class="txt"/>
+        </form>
+    </div>
+    <ul class="sidelist">
+</body>
+</html>
