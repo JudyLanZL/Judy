@@ -1,0 +1,103 @@
+a, a:hover, .day{color:#828d95;}
+.sidelist{min-width:535px;}
+.sidelist li a, .tag a, .active{background-color:#828d95;}
+.day{ border-color:#828d95;}
+.text blockquote{ border-left-color:#828d95;}
+body{background-color:#dfdfe1;}
+#morecontent_frame{margin-top:30px;}
+body{background-image:url("背景图.jpg");}
+body{background-attachment:fixed;}
+.notes .action{width:500px;}
+#comment_frame{width:530px;}
+.video object,.video embed{width:530px;height:441px;}
+img.head{
+    width: 200px;
+    border-radius: 100px ;
+    margin-left: auto;
+    margin-right:auto;
+    display:block;
+}
+h1.name{
+    color: darkslategray;
+    font-size: 30px;
+    text-align: center;
+}
+.body{
+    background-image: url("背景图.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+h1.headline{
+    color: #2a2a2a;
+    font-size: 40px;
+    font-style: initial;
+    text-align: right;
+}
+h2{
+    text-align: center;
+}
+p{
+    background-color: rgba(94,136,152,0.53);
+    color: #051d4d;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+}
+p.apart{
+    color: #527fa0;
+    font-size: 40px;
+}
+p.change{
+    ackground-color: rgba(94,136,152,0.53);
+    color: #1b4b91;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+}
+img.button{
+    width: 20px;
+    border-radius: 100px ;
+}
+img.pic{
+    background-color: rgba(94,136,152,0.53);
+    width: 500px;
+    margin-left: auto;
+    margin-right:auto;
+    display:block;
+}
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#box{
+    width: 800px;
+    border: 1px solid #ccc;
+    margin: 100px auto;
+    padding: 20px;
+}
+
+#my_textarea{
+    width: 80%;
+    height: 120px;
+}
+
+.box-top{
+    margin-bottom: 20px;
+}
+
+#ul{
+    margin: 0 80px;
+}
+
+#ul li{
+    border-bottom: 1px dashed #ccc;
+    color: red;
+    line-height: 44px;
+}
+
+#ul li a{
+    float: right;
+}
+#mainDiv{ position: absolute; top: 20%;left: 20%; width: 80%; height: 80%; } #label1{ margin-right: 2%; /*vertical-align: top;*/ } #mainText{ width: 30%; } #popTextarea{ display: none; font-size: 30px; font-weight: bold; }
